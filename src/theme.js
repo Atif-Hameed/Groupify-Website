@@ -10,6 +10,9 @@ const theme = createTheme({
         },
         borderColor:{
             main : '#E5E7EB'
+        },
+        secondary : {
+            main : "#00778B" 
         }
     }
 })

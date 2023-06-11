@@ -5,8 +5,8 @@ import { Box, Grid, Typography, styled } from "@mui/material";
 import NavBar from "../Dashboard/Navbar";
 import DownNav from "../Dashboard/DownNav";
 import Bottom from "../Dashboard/Bottom";
-import FolderOutlinedIcon from '@mui/icons-material/FolderOutlined';
-import TeamTable from "../Groups/Table";
+import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined';
+import TeamTable from "./TeamTable";
 
 
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -27,9 +27,8 @@ const Team = () => {
                         <SideBar/>
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
-                        <NavBar icon={<FolderOutlinedIcon sx={{ color: '#00778B' }} />}  description={<Typography sx={{ color: '#000' }}>Groups</Typography>} />
+                        <NavBar icon={<AssignmentIndOutlinedIcon sx={{ color: '#00778B' }} />}  description={<Typography sx={{ color: '#000' }}>Team</Typography>} />
                         <DownNav/>
-                        {/* <Table/> */}
                         <TeamTable/>
                         <StyledBox sx={{position:'absolute',bottom:'0',left:'0',width:'100%'}}>
                              <Bottom/>

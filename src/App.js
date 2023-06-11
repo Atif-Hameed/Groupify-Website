@@ -13,8 +13,12 @@ import DashBoard from './components/Dashboard/DashBoard';
 import SideBar from './components/Dashboard/Sidebar';
 import Groups from './components/Groups/Groups';
 import HighlvlGrop from './components/Groups/HighlvlGrops';
-import SalesGrop from './components/Groups/SalesGrop';
 import Team from './components/Team/Team';
+import TeamGroup from './components/Team/TeamGroup';
+import TeamGroupData from './components/Team/TeamGroupData';
+import Posts from './components/Posts/Posts';
+import NewPost from './components/Posts/NewPost';
+import SendPost from './components/Posts/SendPost';
 
 
 
@@ -35,6 +39,11 @@ const App = () => {
           <Route path='/groups' element={<Groups />} />
           <Route path='/highlvlGrop' element={<HighlvlGrop/>} />
           <Route path='/team' element={<Team/>} />
+          <Route path='/teamGroups' element={<TeamGroup/>} />
+          <Route path='/teamGroupData' element={<TeamGroupData/>} />
+          <Route path='/posts' element={<Posts/>} />
+          <Route path='/newPost' element={<NewPost/>} />
+          <Route path='/sendPost' element={<SendPost/>} />
         </Routes>
       </BrowserRouter>
       </ThemeProvider>

@@ -49,7 +49,7 @@ const NavBar = (props) => {
                             edge="start"
                             color="inherit"
                             aria-label="open drawer"
-                            sx={{mr: 2,gap: 1,display: 'flex',alignItems: 'center',}}
+                            sx={{mr: 2,gap: 1, ml:-1, display: 'flex',alignItems: 'center',}}
                         >
                             <Box>{props.icon}</Box>
                             {/* <WidgetsOutlinedIcon sx={{ color: '#00778B' }} /> */}
