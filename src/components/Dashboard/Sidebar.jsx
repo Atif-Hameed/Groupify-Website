@@ -44,7 +44,7 @@ const SideBar = () => {
                         <Box sx={{ position: 'absolute', bottom: '0', left: '0', width: '100%' }}>
 
                             <MenuItem icon={<ExtensionOutlinedIcon sx={{ color: '#00778B' }} />} > Extension </MenuItem>
-                            <MenuItem icon={<AccountCircleOutlinedIcon sx={{ color: '#00778B' }} />} > My Account </MenuItem>
+                            <MenuItem component={<Link to='/myAccount' />} icon={<AccountCircleOutlinedIcon sx={{ color: '#00778B' }} />} > My Account </MenuItem>
                             <MenuItem style={{ backgroundColor: '#008399', color: '#fff' }} icon={<TextSnippetOutlinedIcon sx={{ color: '#fff' }} />} > Documentation </MenuItem>
 
                         </Box>

@@ -19,6 +19,7 @@ import TeamGroupData from './components/Team/TeamGroupData';
 import Posts from './components/Posts/Posts';
 import NewPost from './components/Posts/NewPost';
 import SendPost from './components/Posts/SendPost';
+import MyAccount from './components/MyAccount/MyAccount';
 
 
 
@@ -44,6 +45,7 @@ const App = () => {
           <Route path='/posts' element={<Posts/>} />
           <Route path='/newPost' element={<NewPost/>} />
           <Route path='/sendPost' element={<SendPost/>} />
+          <Route path='/myAccount' element={<MyAccount/>} />
         </Routes>
       </BrowserRouter>
       </ThemeProvider>
