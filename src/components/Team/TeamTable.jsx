@@ -10,18 +10,23 @@ import TableRow from '@mui/material/TableRow';
 import Folder from '../../assets/folder.png'
 import FolderAdd from '../../assets/folderAdd.png'
 import ArrowDown from '../../assets/arrowDown.png'
-import { Avatar, Box, Button, Checkbox, Typography } from '@mui/material';
+import { Avatar, Box, Button, Checkbox, Divider, Popover, TextField, Typography } from '@mui/material';
 import AvtarImg from '../../assets/avtarImg.png'
 import OpenArrow from '../../assets/openArrow.png'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
 import { Link } from 'react-router-dom';
 import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
+import MailIcon from '@mui/icons-material/Mail';
+import { useState } from 'react';
+import PersonIcon from '@mui/icons-material/Person';
 
 
 
 
 export default function TeamTable() {
+
+    const [Open, setOpen] = useState(false)
 
     return (
 
@@ -48,10 +53,73 @@ export default function TeamTable() {
                             </TableCell>
 
                             <TableCell sx={{ py: 1.1, display: 'flex', justifyContent: 'flex-end' }} colSpan={0}>
-                                <Box gap={1} sx={{ color: '#00778B', display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+                                <Box onClick={e => setOpen(true)} gap={1} sx={{ color: '#00778B', display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
                                     <Typography>Add</Typography>
                                     <PersonAddAltIcon />
                                 </Box>
+
+                                                   {/* ADD TEAM MEMBER */}
+                               
+                                <Popover
+                                    // id={id}
+                                    open={Open}
+                                    // anchorEl={anchorEl}
+                                    onClose={e => setOpen(false)}
+                                    anchorOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'center',
+                                    }}
+                                >
+                                    <Box width={'500px'} height={'auto'} >
+                                        <Box px={7} py={7} >
+                                            <Typography mb={1} color={'#1F2A37'} variant='h6' fontWeight={'500'} >Add Team Member</Typography>
+                                            <Divider sx={{ borderWidth: '1px' }} />
+                                            <Typography mt={2} mb={1} color={'#1F2A37'} variant='h6' fontSize={'18px'} fontWeight={'bold'} >Name</Typography>
+                                            <TextField
+                                                fullWidth
+                                                id="outlined-read-only-input"
+                                                defaultValue="Enter The Team Member Name"
+                                                size="small"
+                                                sx={{ color: '#9CA3AF', mb: 2, backgroundColor: '#F9FAFB' }}
+                                                InputProps={{
+                                                    readOnly: true,
+                                                    sx: {
+                                                        '& input': {
+                                                            color: '#9CA3AF',
+                                                        }
+                                                    },
+                                                    startAdornment: (
+                                                        <PersonIcon fontSize="small" sx={{ mr: 1, color: '#6B7280' }} />
+                                                    ),
+                                                }}
+                                            />
+
+                                            <Typography mt={2} mb={1} color={'#1F2A37'} variant='h6' fontSize={'18px'} fontWeight={'bold'} >Email Address</Typography>
+                                            <TextField
+                                                fullWidth
+                                                id="outlined-read-only-input"
+                                                defaultValue="deviddar@gmail.com"
+                                                size="small"
+                                                sx={{ color: '#9CA3AF', mb: 2, backgroundColor: '#F9FAFB' }}
+                                                InputProps={{
+                                                    readOnly: true,
+                                                    sx: {
+                                                        '& input': {
+                                                            color: '#9CA3AF',
+                                                        }
+                                                    },
+                                                    startAdornment: (
+                                                        <MailIcon fontSize="small" sx={{ mr: 1, color: '#6B7280' }} />
+                                                    ),
+                                                }}
+                                            />
+                                            <Button fullWidth variant='contained' sx={{ mt: 1, textTransform: 'capitalize', fontSize: '17px', backgroundColor: '#00778B', borderRadius: '7px', '&:hover': { backgroundColor: '#00778B' } }} >Add Team Member</Button>
+                                            <Button onClick={e => setOpen(false)} fullWidth variant='outlined' sx={{ mt: 2, color: '#1F2A37', borderColor: '#1F2A37', borderRadius: '7px' }} >Cancel</Button>
+                                        </Box>
+                                    </Box>
+
+                                </Popover>
+                            
                             </TableCell>
                         </TableRow>
 
@@ -62,13 +130,13 @@ export default function TeamTable() {
 
                         <TableRow>
                             <TableCell colSpan={5}>
-                                <Link to="/teamGroups" style={{textDecoration:'none'}}>
-                                    <Box gap={3} sx={{ color: '#00778B', display: 'flex', alignItems: 'center', justifyContent:'center', cursor: 'pointer' }}>
+                                <Link to="/teamGroups" style={{ textDecoration: 'none' }}>
+                                    <Box gap={3} sx={{ color: '#00778B', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer' }}>
                                         <Box gap={1} sx={{ color: '#00778B', display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
                                             <Typography>Add</Typography>
                                             <PersonAddAltIcon />
                                         </Box>
-                                        <Typography textAlign={'center'} sx={{color:'#265FFD',textDecoration:'underline'}} >Invite Your First Team Member</Typography>
+                                        <Typography textAlign={'center'} sx={{ color: '#265FFD', textDecoration: 'underline' }} >Invite Your First Team Member</Typography>
                                     </Box>
                                 </Link>
                             </TableCell>

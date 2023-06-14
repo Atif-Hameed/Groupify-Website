@@ -7,6 +7,7 @@ import DownNav from "../Dashboard/DownNav";
 import Bottom from "../Dashboard/Bottom";
 import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined';
 import TeamTable from "./TeamTable";
+import DownNavMenues from "../Groups/DownNavMenues";
 
 
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -28,7 +29,7 @@ const Team = () => {
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
                         <NavBar icon={<AssignmentIndOutlinedIcon sx={{ color: '#00778B' }} />}  description={<Typography sx={{ color: '#000' }}>Team</Typography>} />
-                        <DownNav/>
+                        <DownNavMenues/>
                         <TeamTable/>
                         <StyledBox sx={{position:'absolute',bottom:'0',left:'0',width:'100%'}}>
                              <Bottom/>

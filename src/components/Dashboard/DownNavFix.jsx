@@ -82,7 +82,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-export default function DownNav(props) {
+export default function DownNavFix() {
     return (
         <>
             <StyledBox sx={{ flexGrow: 1 }}>
@@ -115,12 +115,9 @@ export default function DownNav(props) {
                             </Box>
 
                             <Box sx={{ display: 'flex', color: '#000', alignItems: 'center', gap: 1 }}>
-                                {props.icon1}
-                                {props.icon2}
-                                {props.icon3}
-                                {/* <Box component={'img'} src={AddIcon} />
                                 <Box component={'img'} src={AddIcon} />
-                                <Box component={'img'} src={AddIcon} /> */}
+                                <Box component={'img'} src={AddIcon} />
+                                <Box component={'img'} src={AddIcon} />
                                 <Box component={'img'} src={CcIcon} />
                                 <Box component={'img'} src={ImageIcon} />
                             </Box>

@@ -38,10 +38,10 @@ export default function BillingTable() {
                         <Typography>$9/Per Month</Typography>
                     </TableCell>
                     <TableCell sx={{ py: 0.7 }}>
-                        <Button variant="contained" sx={{backgroundColor:'#E9F3FE'}}><Box component={'img'} src={Doc} /></Button>
+                        <Button variant="contained" sx={{backgroundColor:'#E9F3FE'}}><Box component={'img'} src={Doc} height={'19px'} /></Button>
                     </TableCell>
                     <TableCell sx={{ py: 0.7 }}>
-                        <Button variant="contained" sx={{backgroundColor:'#E9F3FE'}}><RemoveRedEyeOutlinedIcon sx={{color:'#000'}}/></Button>
+                        <Button variant="contained" sx={{backgroundColor:'#E9F3FE'}}><RemoveRedEyeOutlinedIcon fontSize='small' sx={{color:'#000'}}/></Button>
                     </TableCell>
 
                 </TableRow>

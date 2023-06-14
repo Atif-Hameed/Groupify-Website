@@ -5,10 +5,8 @@ import NavBar from "../Dashboard/Navbar";
 import DownNav from "../Dashboard/DownNav";
 import Bottom from "../Dashboard/Bottom";
 import PostIcon from '../../assets/post.png'
-import PostTabs from "../Posts/PostTabs";
-import MyAccountTabs from "./MyAccountTabs";
-import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined';
+import ExtensionMain from "./ExtensionMain";
 
 
 
@@ -22,7 +20,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
 
 
 
-const MyAccount = () => {
+const Extension = () => {
     return (
         <>
             <Box sx={{ backgroundColor: '#F9FAFB' }}>
@@ -32,13 +30,8 @@ const MyAccount = () => {
                         <SideBar />
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
-                        <NavBar icon={<AccountCircleOutlinedIcon sx={{ color: '#00778B' }} />} description={<Box sx={{display:'flex', alignItems:'center'}}>
-                            <Typography sx={{ color: '#000' }}>My Account</Typography>
-                            <ChevronRightIcon sx={{color:'#00778B'}} />
-                            <Typography fontSize={'16px'} color={'#00778B'} >Profile</Typography>
-                        </Box>} />
-                        {/* <PostTabs/> */}
-                        <MyAccountTabs />
+                        <NavBar icon={<ExtensionOutlinedIcon sx={{color:'#00778B'}} />} description={<Typography sx={{ color: '#000',fontSize:'18px' }}>Extension</Typography>} />
+                        <ExtensionMain/>
                         <StyledBox sx={{ position: 'absolute', bottom: '0', left: '0', width: '100%' }}>
                             <Bottom />
                         </StyledBox>
@@ -51,4 +44,4 @@ const MyAccount = () => {
     )
 }
 
-export default MyAccount;
+export default Extension;

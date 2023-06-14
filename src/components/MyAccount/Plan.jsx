@@ -1,5 +1,5 @@
-import { Box, Button, Card, CardContent, Grid, Switch, TextField, Typography } from "@mui/material";
-import React from "react";
+import { Avatar, Box, Button, Card, CardContent, Dialog, DialogContent, Grid, Switch, TextField, Typography } from "@mui/material";
+import React, { useState } from "react";
 import BoxTick from '../../assets/box-tick.png'
 import Dot from '../../assets/greenDot.png'
 import Toggle from '../../assets/Toggle.png'
@@ -7,8 +7,15 @@ import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
+import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
+import ComparePlan from "./ComparePlan";
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+
 
 const Plan = () => {
+
+    const [open, setOpen] = useState(false)
+
     return (
         <>
             <Box px={2}>
@@ -61,38 +68,59 @@ const Plan = () => {
 
                         </Box>
 
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap:4 }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
 
-                            <Box sx={{width:'50%'}}>
+                            <Box sx={{ width: '50%' }}>
                                 <Card>
                                     <CardContent sx={{ my: 3 }}>
-                                        <Typography mb={1}  variant="h4" fontSize={'21px'}  textAlign={'center'} fontWeight={'500'} color={'#1F2A37'}>Groupify Plus</Typography>
+                                        <Typography mb={1} variant="h4" fontSize={'21px'} textAlign={'center'} fontWeight={'500'} color={'#1F2A37'}>Groupify Plus</Typography>
                                         <Typography mb={2} variant="h4" fontSize={'30px'} fontWeight={'500'} textAlign={'center'} >$29 /mo</Typography>
                                         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                                             <Button variant="contained" disableElevation sx={{ fontSize: '8px', borderRadius: '20px', border: '0.25px solid #00778B', py: 0.3, backgroundColor: '#00778B1A', color: '#00778B', '&:hover': { backgroundColor: '#00778B1A' } }} >Up to 3 Team Members</Button>
                                         </Box>
                                     </CardContent>
                                 </Card>
-                                <Button fullWidth sx={{ mt: 1, color: '#00778B', border: '0.25px solid #00778B', borderRadius: '8px', textTransform: 'capitalize' }} >Upgrade</Button>
+                                <Button onClick={e => setOpen(true)} fullWidth sx={{ mt: 1, color: '#00778B', border: '0.25px solid #00778B', borderRadius: '8px', textTransform: 'capitalize' }} >Upgrade</Button>
                             </Box>
 
-                            <Box Box sx={{width:'50%'}}>
+                            <Box Box sx={{ width: '50%' }}>
                                 <Card>
                                     <CardContent sx={{ my: 3 }}>
-                                        <Typography mb={1} variant="h4" fontSize={'21px'}  textAlign={'center'} fontWeight={'500'} color={'#1F2A37'}>Groupify Pro</Typography>
+                                        <Typography mb={1} variant="h4" fontSize={'21px'} textAlign={'center'} fontWeight={'500'} color={'#1F2A37'}>Groupify Pro</Typography>
                                         <Typography mb={2} variant="h4" fontSize={'30px'} fontWeight={'500'} textAlign={'center'} >$59 /mo</Typography>
                                         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                                             <Button variant="contained" disableElevation sx={{ fontSize: '8px', borderRadius: '20px', border: '0.25px solid #00778B', py: 0.3, backgroundColor: '#00778B1A', color: '#00778B', '&:hover': { backgroundColor: '#00778B1A' } }} >Up to 3 Team Members</Button>
                                         </Box>
                                     </CardContent>
                                 </Card>
-                                <Button fullWidth sx={{ mt: 1, color: '#00778B', border: '0.25px solid #00778B', borderRadius: '8px', textTransform: 'capitalize' }} >Upgrade</Button>
+                                <Button onClick={e => setOpen(true)} fullWidth sx={{ mt: 1, color: '#00778B', border: '0.25px solid #00778B', borderRadius: '8px', textTransform: 'capitalize' }} >Upgrade</Button>
                             </Box>
                         </Box>
                     </Grid>
-
                 </Grid>
+                <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    <Box my={2} onClick={e => setOpen(true)} sx={{ display: 'flex', alignItems: 'center', gap: 1, cursor:'pointer' }} >
+                        <ArrowCircleRightOutlinedIcon sx={{ color: '#00778B' }} />
+                        <Typography sx={{ color: '#000' }} >Compare Plans</Typography>
+                    </Box>
 
+
+                    <Dialog
+                        maxWidth="md" sx={{ '& .MuiDialog-paper': { width: '900px' } }}
+                        open={open}
+                        onClose={e => setOpen(false)}>
+
+                        <DialogContent sx={{ width: '100%', p: 0, m: 0 }}>
+
+                            <ComparePlan des={<Avatar onClick={e => setOpen(false)} sx={{ backgroundColor: '#fff', cursor: 'pointer' }}>
+                                <CloseOutlinedIcon sx={{ color: '#000' }} />
+                            </Avatar>} />
+                        </DialogContent>
+
+                    </Dialog>
+
+
+                </Box>
             </Box>
         </>
     )

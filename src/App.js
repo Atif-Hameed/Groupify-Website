@@ -20,6 +20,7 @@ import Posts from './components/Posts/Posts';
 import NewPost from './components/Posts/NewPost';
 import SendPost from './components/Posts/SendPost';
 import MyAccount from './components/MyAccount/MyAccount';
+import Extension from './components/Extension/Extension';
 
 
 
@@ -46,6 +47,7 @@ const App = () => {
           <Route path='/newPost' element={<NewPost/>} />
           <Route path='/sendPost' element={<SendPost/>} />
           <Route path='/myAccount' element={<MyAccount/>} />
+          <Route path='/extension' element={<Extension/>} />
         </Routes>
       </BrowserRouter>
       </ThemeProvider>

@@ -7,6 +7,7 @@ import DownNav from "./DownNav";
 import Cards from "./Cards";
 import Bottom from "./Bottom";
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
+import DownNavFix from "./DownNavFix";
 
 
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -29,7 +30,7 @@ const DashBoard = () => {
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
                         <NavBar icon={<WidgetsOutlinedIcon sx={{ color: '#00778B' }} />}  description={<Typography sx={{ color: '#000' }}>DashBoard</Typography>} />
-                        <DownNav/>
+                        <DownNavFix/>
                         <Cards/>
                         <StyledBox sx={{position:'absolute',bottom:'0',left:'0',width:'100%'}}>
                              <Bottom/>
