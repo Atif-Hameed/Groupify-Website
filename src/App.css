@@ -1,0 +1,14 @@
+.account_profile{
+  padding: 0;
+  background-color: '#fff',
+}
+
+.myAccount_Tabs{
+  padding: 8px 28px;
+}
+
+@media screen and (max-width: 600px){
+  .account_profile{
+    background-color:transparent;
+  }
+}

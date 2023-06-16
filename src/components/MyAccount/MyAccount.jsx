@@ -37,7 +37,6 @@ const MyAccount = () => {
                             <ChevronRightIcon sx={{color:'#00778B'}} />
                             <Typography fontSize={'16px'} color={'#00778B'} >Profile</Typography>
                         </Box>} />
-                        {/* <PostTabs/> */}
                         <MyAccountTabs />
                         <StyledBox sx={{ position: 'absolute', bottom: '0', left: '0', width: '100%' }}>
                             <Bottom />

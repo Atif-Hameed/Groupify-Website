@@ -18,7 +18,7 @@ const DownNavMenues = () => {
 
     return(
         <>
-            <DownNav icon1={<Box sx={{cursor:'pointer'}} onClick={e => setOpen(true)} component={'img'} src={AddIcon} />} icon2={<Box sx={{cursor:'pointer'}} onClick={e => setOpen(true)} component={'img'} src={AddIcon} />} icon3={<Box sx={{cursor:'pointer'}} onClick={e => setOpen(true)} component={'img'} src={AddIcon} />} />
+            <DownNav ComponentName="Groups" ComponentIcon={<FolderIcon sx={{ color: '#000' }} />} icon1={<Box sx={{cursor:'pointer'}} onClick={e => setOpen(true)}  component={'img'} src={AddIcon} />} icon2={<Box sx={{cursor:'pointer'}} onClick={e => setOpen(true)} component={'img'} src={AddIcon} />} icon3={<Box sx={{cursor:'pointer'}} onClick={e => setOpen(true)} component={'img'} src={AddIcon} />} />
             <Menu
                     id="basic-menu"
                     // anchorEl={anchorEl}

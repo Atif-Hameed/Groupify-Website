@@ -52,7 +52,6 @@ const NavBar = (props) => {
                             sx={{mr: 2,gap: 1, ml:-1, display: 'flex',alignItems: 'center',}}
                         >
                             <Box>{props.icon}</Box>
-                            {/* <WidgetsOutlinedIcon sx={{ color: '#00778B' }} /> */}
                             <Box>{props.description}</Box>
                             
                         </IconButton>

@@ -3,7 +3,7 @@ import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Flask from '../../assets/flask.png'
+import Flask from '../../assets/filter.png'
 import InfoCircle from '../../assets/infoCircle.png'
 import AddIcon from '../../assets/addCircle.png'
 import Radio from '../../assets/Radio.png'

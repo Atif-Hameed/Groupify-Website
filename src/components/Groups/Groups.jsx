@@ -4,6 +4,7 @@ import Table from "./Table";
 import { Box, Button, Divider, Grid, Menu, MenuItem, Popover, TextField, Typography, styled } from "@mui/material";
 import NavBar from "../Dashboard/Navbar";
 import AddIcon from '../../assets/addCircle.png'
+import GroupPic from '../../assets/groupPic.png'
 import DownNav from "../Dashboard/DownNav";
 import Bottom from "../Dashboard/Bottom";
 import FolderOutlinedIcon from '@mui/icons-material/FolderOutlined';
@@ -38,14 +39,26 @@ const Groups = () => {
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
                         <NavBar icon={<FolderOutlinedIcon sx={{ color: '#00778B' }} />} description={<Typography sx={{ color: '#000' }}>Groups</Typography>} />
-                        <DownNavMenues/>
-                        <Table />
+
+                        <DownNavMenues />
+
+                        <Box sx={{ display: { sm: 'unset', xs: 'none' } }}>
+                            <Table />
+                        </Box>
+
+                        <Box  sx={{ display: { sm: 'none', xs: 'unset' } }}>
+                            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', py: 8 }}>
+                                <Box component={'img'} src={GroupPic} />
+                            </Box>
+                            <Typography textAlign={'center'} sx={{fontSize:'16px', px:3}}><span style={{color:'#00778B',fontWeight:'500'}}>Portal Access to this feature is coming soon!</span>  Full Access & Functionality now available using our Browser Exentsion.</Typography>
+                        </Box>
+
                         <StyledBox sx={{ position: 'absolute', bottom: '0', left: '0', width: '100%' }}>
                             <Bottom />
                         </StyledBox>
                     </Grid>
                 </Grid>
-               
+
 
                 <Popover
                     // id={id}

@@ -3,7 +3,7 @@ import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Flask from '../../assets/flask.png'
+import Flask from '../../assets/filter.png'
 import InfoCircle from '../../assets/infoCircle.png'
 import AddIcon from '../../assets/addCircle.png'
 import Radio from '../../assets/Radio.png'
@@ -138,8 +138,8 @@ export default function DownNav(props) {
                     aria-label="open drawer"
                     sx={{ mr: 2, gap: 1, display: 'flex', alignItems: 'center', }}
                 >
-                    <WidgetsIcon sx={{ color: '#000' }} />
-                    <Typography sx={{ color: '#000' }}>Dashboard</Typography>
+                    {props.ComponentIcon}
+                    <Typography sx={{ color: '#000' }}>{props.ComponentName} </Typography>
                 </IconButton>
             </StyledBox2>
 

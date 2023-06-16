@@ -13,7 +13,7 @@ import Plan from './Plan';
 
 
 const Tabs = () => {
-   
+
     const [value, setValue] = React.useState('1');
 
     const handleChange = (event, newValue) => {
@@ -24,28 +24,28 @@ const Tabs = () => {
         <Box sx={{ width: '100%', typography: 'body1' }}>
             <TabContext value={value}>
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <TabList onChange={handleChange} aria-label="lab API tabs example" indicatorColor='secondary' >
-                       
-                        <Tab label= {<Box gap={1} sx={{display:'flex', alignItems:'center'}}>
-                            <AccountCircleOutlinedIcon sx={{color:'#00778B'}}/>
-                            <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Profile</Typography>
-                            </Box>} value="1" />
-                        
-                        <Tab label= {<Box gap={1} sx={{display:'flex', alignItems:'center'}}>
-                            <PaymentsOutlinedIcon/>
-                            <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Billing</Typography>
-                            </Box>} value="2" />
+                    <TabList  onChange={handleChange} aria-label="lab API tabs example" indicatorColor='secondary' >
 
-                        <Tab label= {<Box gap={1} sx={{display:'flex', alignItems:'center'}}>
+                        <Tab label={<Box sx={{display: 'flex', alignItems: 'center',gap:{sm:1,xs:0.5} }}>
+                            <AccountCircleOutlinedIcon sx={{ color: '#00778B' }} />
+                            <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Profile</Typography>
+                        </Box>} value="1" />
+
+                        <Tab label={<Box sx={{ display: 'flex', alignItems: 'center',gap:{sm:1,xs:0.5} }}>
+                            <PaymentsOutlinedIcon />
+                            <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Billing</Typography>
+                        </Box>} value="2" />
+
+                        <Tab label={<Box sx={{ display: 'flex', alignItems: 'center',gap:{sm:1,xs:0.5} }}>
                             <MonetizationOnOutlinedIcon />
                             <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Plan</Typography>
-                            </Box>} value="3" />
-                            
+                        </Box>} value="3" />
+
                     </TabList>
                 </Box>
-                <TabPanel sx={{px:0}} value="1"><AccountProfile/></TabPanel>
-                <TabPanel sx={{px:0}} value="2"><Billing/></TabPanel>
-                <TabPanel sx={{px:0}} value="3"><Plan/></TabPanel>
+                <TabPanel sx={{ px: 0  }} value="1"><AccountProfile /></TabPanel>
+                <TabPanel sx={{ px: 0 }} value="2"><Billing /></TabPanel>
+                <TabPanel sx={{ px: 0 }} value="3"><Plan /></TabPanel>
             </TabContext>
         </Box>
     );
@@ -54,8 +54,8 @@ const Tabs = () => {
 const MyAccountTabs = () => {
     return (
         <>
-            <AppBar elevation={1} sx={{ boxShadow: 'none', backgroundColor: 'transparent',px:3.5, py:1 }} position="static">
-            <Tabs/>
+            <AppBar elevation={1} className="myAccount_Tabs" sx={{ boxShadow: 'none', backgroundColor: 'transparent' }} position="static">
+                <Tabs />
             </AppBar>
         </>
     )

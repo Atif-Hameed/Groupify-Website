@@ -1,7 +1,7 @@
 import React from "react";
 import SideBar from "../Dashboard/Sidebar";
 // import Table from "./Table";
-import { Box, Button, Divider, Grid, Popover, TextField, Typography, styled } from "@mui/material";
+import { Box, Button, Divider, Grid, Menu, MenuItem, Popover, TextField, Typography, styled } from "@mui/material";
 import NavBar from "../Dashboard/Navbar";
 import DownNav from "../Dashboard/DownNav";
 import Bottom from "../Dashboard/Bottom";
@@ -23,7 +23,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import { useState } from "react";
 import MailIcon from '@mui/icons-material/Mail';
 import FolderIcon from '@mui/icons-material/Folder';
-
+import BorderColorIcon from '@mui/icons-material/BorderColor';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 
 
@@ -39,6 +41,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
 
 const TeamGroupContent = () => {
     const [Open, setOpen] = useState(false)
+    const [dotOpen, setdotOpen] = useState(false)
     return (
         <>
             <Paper sx={{ width: '95%', mt: 4, mx: 4 }}>
@@ -73,8 +76,8 @@ const TeamGroupContent = () => {
                                         <PersonAddAltIcon />
                                     </Box>
 
-                                                 {/* ADD TEAM MEMBER */}
-                                 
+                                    {/* ADD TEAM MEMBER */}
+
                                     <Popover
                                         // id={id}
                                         open={Open}
@@ -195,8 +198,56 @@ const TeamGroupContent = () => {
                                 </TableCell>
 
                                 <TableCell sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                                    <MoreVertIcon sx={{ color: '#9CA3AF' }} />
+                                    <MoreVertIcon onClick={e => setdotOpen(true)} sx={{ color: '#9CA3AF', cursor: 'pointer' }} />
                                 </TableCell>
+                                <Menu
+                                    id="demo-positioned-menu"
+                                    open={dotOpen}
+                                    elevation={1}
+                                    onClose={e => setdotOpen(false)}
+                                    anchorOrigin={{
+                                        vertical: 'center',
+                                        horizontal: 'right',
+                                    }}
+                                    transformOrigin={{
+                                        vertical: 'center',
+                                        horizontal: 'center',
+                                    }}
+                                >
+                                    <MenuItem sx={{
+                                        '&:hover': {
+                                            color: '#00778B'
+                                        },
+                                    }} >
+                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                            <BorderColorIcon />
+                                            <Typography fontWeight={'bold'}>Edit Group</Typography>
+                                        </Box>
+
+                                    </MenuItem>
+
+                                    <MenuItem sx={{
+                                        '&:hover': {
+                                            color: '#00778B'
+                                        },
+                                    }}>
+                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                            <ContentCopyIcon />
+                                            <Typography fontWeight={'bold'}>Copy Paste</Typography>
+                                        </Box>
+                                    </MenuItem>
+
+                                    <MenuItem sx={{
+                                        '&:hover': {
+                                            color: '#00778B'
+                                        },
+                                    }}>
+                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                                            <DeleteOutlineIcon />
+                                            <Typography fontWeight={'bold'}>Delet Group</Typography>
+                                        </Box>
+                                    </MenuItem>
+                                </Menu>
 
                             </TableRow>
 
@@ -232,7 +283,7 @@ const TeamGroupContent = () => {
                                 </TableCell>
 
                                 <TableCell sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-                                    <MoreVertIcon sx={{ color: '#9CA3AF' }} />
+                                    <MoreVertIcon onClick={e => setdotOpen(true)} sx={{ color: '#9CA3AF', cursor: 'pointer' }} />
                                 </TableCell>
                             </TableRow>
 
