@@ -7,7 +7,8 @@ const Billing = () => {
         <>
             <Box>
                 <Grid container spacing={3} >
-                    <Grid item xs={4}>
+                   
+                    <Grid item sm={4} xs={12}>
                         <Typography mb={2} variant="h5" fontSize={'20px'} fontWeight={'bold'} color={'#1F2A37'} >Billing Information</Typography>
                         <Card sx={{ minWidth: 275, pb: 2 }}>
                             <CardContent>
@@ -62,10 +63,11 @@ const Billing = () => {
                         </Card>
                     </Grid>
 
-                    <Grid item xs={8}>
+                    <Grid item sm={8} xs={12} >
                         <Typography mb={2} variant="h5" fontSize={'20px'} fontWeight={'bold'} color={'#1F2A37'} >Transaction History</Typography>
                         <BillingTable/>
                     </Grid>
+                
                 </Grid>
             </Box>
         </>
