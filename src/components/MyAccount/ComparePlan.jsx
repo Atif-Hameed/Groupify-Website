@@ -20,7 +20,7 @@ const CardPlan = (props) => {
             <Box mt={4}>
                 <Box mb={1} sx={{ display: 'flex', alignItems: 'center', gap: 1 }} >
                     <CheckBoxIcon sx={{ color: '#1C64F2', fontSize: '22px' }} />
-                    <Typography variant="h6" fontSize={'15px'} >{props.point1}</Typography>
+                    <Typography sx={{color:{sm:'unset', xs:'#000'}}} variant="h6" fontSize={'15px'} >{props.point1}</Typography>
                 </Box>
                 <Box mb={1} sx={{ display: 'flex', alignItems: 'center', gap: 1 }} >
                     <CheckBoxIcon sx={{ color: '#1C64F2', fontSize: '22px' }} />
@@ -87,7 +87,7 @@ const ComparePlan = (props) => {
                 </Dialog>
 
                 <Grid container my={4} >
-                    <Grid item xs={4} sx={{ borderRight: '1px solid #C7C7C7' }}>
+                    <Grid item sm={4} xs={12} sx={{ borderRight: '1px solid #C7C7C7' }}>
                         <Box px={3} py={3} >
                             <CardPlan
                                 package="Free"
@@ -103,7 +103,7 @@ const ComparePlan = (props) => {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={4} sx={{ borderRight: '1px solid #C7C7C7' }}>
+                    <Grid item sm={4} xs={12} sx={{ borderRight: '1px solid #C7C7C7' }}>
                         <Box px={3} py={3} >
                             <CardPlan
                                 package="Plus"
@@ -119,7 +119,7 @@ const ComparePlan = (props) => {
                         </Box>
                     </Grid>
 
-                    <Grid item xs={4} >
+                    <Grid item sm={4} xs={12} >
                         <Box px={3} py={3}  >
                             <CardPlan
                                 package="Pro"
