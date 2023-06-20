@@ -27,17 +27,20 @@ const Tabs = () => {
                     <TabList onChange={handleChange} aria-label="lab API tabs example" indicatorColor='secondary' >
                         <Tab label= {<Box gap={1} sx={{display:'flex', alignItems:'center'}}>
                             <Box component={'img'} height={'19px'} src={EditIcon} />
-                            <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Create Posts</Typography>
+                            <Typography sx={{display:{sm:'unset',xs:'none'}}} textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Create Posts</Typography>
+                            <Typography sx={{display:{sm:'none',xs:'unset'}}} textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Create</Typography>
                             </Box>} value="1" />
                         
                         <Tab label= {<Box gap={1} sx={{display:'flex', alignItems:'center'}}>
                             <CalendarMonthOutlinedIcon/>
-                            <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Pending Posts</Typography>
+                            <Typography sx={{display:{sm:'unset',xs:'none'}}} textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Pending Posts</Typography>
+                            <Typography sx={{display:{sm:'none',xs:'unset'}}} textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Pending</Typography>
                             </Box>} value="2" />
 
                         <Tab label= {<Box gap={1} sx={{display:'flex', alignItems:'center'}}>
                             <InboxOutlinedIcon />
-                            <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Posts History</Typography>
+                            <Typography sx={{display:{sm:'unset',xs:'none'}}} textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Posts History</Typography>
+                            <Typography sx={{display:{sm:'none',xs:'unset'}}} textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >History</Typography>
                             </Box>} value="3" />
                     </TabList>
                 </Box>

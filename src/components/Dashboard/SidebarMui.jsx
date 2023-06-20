@@ -16,7 +16,9 @@ import ExtensionOutlinedIcon from '@mui/icons-material/ExtensionOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import TextSnippetOutlinedIcon from '@mui/icons-material/TextSnippetOutlined';
 import { IconButton, Typography, styled } from '@mui/material';
+import BorderColorIcon from '@mui/icons-material/BorderColor';
 import MenuIcon from '../../assets/menu2.png'
+import { Link, useLocation } from 'react-router-dom';
 
 const StyledBox = styled(Box)(({ theme }) => ({
     display: 'flex',
@@ -27,6 +29,10 @@ const StyledBox = styled(Box)(({ theme }) => ({
 
 
 export default function SidebarMui() {
+
+    const location = useLocation()
+    console.log(location)
+    const pathname = location.pathname
 
     const icons = [WidgetsIcon, FolderOutlinedIcon];
 
@@ -51,38 +57,64 @@ export default function SidebarMui() {
 
     const list = (anchor) => (
         <Box
-            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250,overflow:'hidden', }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                <Sidebar style={{ width: '100%', backgroundColor: '#fff', position: 'relative', height: '100vh' }}>
-                    <Menu style={{}} >
-                        <Box>
-                            <MenuItem style={{ marginBottom: '50px', marginTop: '10px' }}>
-                                <Box sx={{ width: '115px', height: '38px', mx: 'auto' }} component={'img'} src={LogoMain} />
-                            </MenuItem>
+            <Sidebar style={{ width: '100%', backgroundColor: '#fff', position: 'relative', height: '100vh' }}>
+                    <Menu
+                        menuItemStyles={{
+                            button: ({ level, active, disabled }) => {
+                                if (active)
+                                    return {
+                                        borderRadius: '5px',
+                                        color: '#fff !important',
+                                        backgroundColor: '#00778B !important ',
+                                        '& .MuiSvgIcon-root': {
+                                            color: '#fff',
+                                        },
+                                        '&:hover': {
+                                            backgroundColor: '#00778B !important ',
+                                            '& .MuiSvgIcon-root': {
+                                                color: '#fff',
+                                            },
+                                        }
+                                    };
 
-                            <MenuItem icon={<WidgetsIcon sx={{ color: '#00778B' }} />} > Dashboard </MenuItem>
-                            <MenuItem icon={<FolderOutlinedIcon sx={{ color: '#00778B' }} />} > Groups </MenuItem>
-                            <MenuItem icon={<AssignmentIndOutlinedIcon sx={{ color: '#00778B' }} />} > Team </MenuItem>
-                            <MenuItem icon={<ExtensionOutlinedIcon sx={{ color: '#00778B' }} />} > Extension </MenuItem>
-                            <MenuItem icon={<AccountCircleOutlinedIcon sx={{ color: '#00778B' }} />} > My Account </MenuItem>
+                            },
+                        }}
+                    >
+                        <Box sx={{ pb: 1, pl: '18px', pr: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap:{sm:25.5, xs:39.75}  }}>
+                            <Box>
+                                <MenuItem component={<Link to='/' />} style={{ marginBottom: '50px', marginTop: '10px' }}>
+                                    <Link to='/'>
+                                        <Box sx={{ width: '115px', height: '38px', mx: 'auto' }} component={'img'} src={LogoMain} />
+                                    </Link>
+                                </MenuItem>
 
+                                <MenuItem active={pathname === '/dashboard'} component={<Link to='/dashboard' />} icon={<WidgetsIcon sx={{ color: '#00778B' }} />} > Dashboard </MenuItem>
+                                <MenuItem active={pathname === '/groups'} component={<Link to='/groups' />} icon={<FolderOutlinedIcon sx={{ color: '#00778B' }} />} > Groups </MenuItem>
+                                <MenuItem active={pathname === '/team'} component={<Link to='/team' />} icon={<AssignmentIndOutlinedIcon sx={{ color: '#00778B' }} />} > Team </MenuItem>
+                                <MenuItem active={pathname === '/posts'} component={<Link to='/posts' />} icon={<BorderColorIcon sx={{ color: '#00778B' }} />} > Posts </MenuItem>
+                                <MenuItem icon={<HandymanOutlinedIcon sx={{ color: '#00778B' }} />} > Admin Tools </MenuItem>
+                            </Box>
+
+                            <Box sx={{}}>
+
+                                <MenuItem active={pathname === '/extension'} component={<Link to='/extension' />} icon={<ExtensionOutlinedIcon sx={{ color: '#00778B' }} />} > Extension </MenuItem>
+                                <MenuItem active={pathname === '/myAccount'} component={<Link to='/myAccount' />} icon={<AccountCircleOutlinedIcon sx={{ color: '#00778B' }} />} > My Account </MenuItem>
+
+                            </Box>
                         </Box>
-                        <Box sx={{ position: 'absolute', bottom: '0', left: '0', width: '100%' }}>
 
-                            <MenuItem>
-                                <Typography textAlign={'center'} sx={{ color: 'Gray/500', fontSize: '14px' }}>
-                                    Copyright 2022 | <Box component={'span'} sx={{ color: '#00778B' }} >Groupify</Box>
-                                </Typography>
-                            </MenuItem>
-
+                        <Box sx={{ pl: '18px', pr:{sm:'50px',xs:'30px'} , backgroundColor: '#008399', color: '#fff', }}>
+                            <MenuItem disabled  style={{ color:'#fff' } } icon={<TextSnippetOutlinedIcon />} > Documentation </MenuItem>
                         </Box>
 
                     </Menu>
-                </Sidebar>;
+                </Sidebar>
             </List>
 
         </Box>

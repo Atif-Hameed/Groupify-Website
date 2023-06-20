@@ -4,6 +4,7 @@ import person from "../../assets/person.png"
 import person2 from '../../assets/person2.png'
 import fb from '../../assets/fb.png'
 import logoMain from '../../assets/logoMain.png'
+import PersonSmall from '../../assets/PersonSmall2.png'
 import { Link } from "react-router-dom";
 
 const SignInEmail = () => {
@@ -11,22 +12,22 @@ const SignInEmail = () => {
         <>
             <Grid container sx={{ height: '100vh' }}>
                 <Grid sm={6} xs={12}>
-                    <Box >
-                        <img style={{ height: '99vh', width: '100%', objectFit: 'cover' }} component={'img'} src={person} />
-                    </Box>
+                    <Box component={'img'} src={person} sx={{display:{sm:'unset', xs:'none'}, height: '99vh', width: '100%', objectFit: 'cover'}} />
+                    <Box component={'img'} src={PersonSmall} sx={{display:{sm:'none', xs:'unset'}, height: { sm: '100vh', xs: '100%' }, width: '100%', objectFit: { sm: 'cover', xs: 'fill' } }} />
                 </Grid>
-                <Grid xs={6} pl={10} position={'relative'}>
-                    <Box>
-                        <Box mb={10} sx={{ mt: 10, width: '120px' }} component={'img'} src={logoMain} />
-                        <Typography variant="h4" mb={4}>Sign in to Groupify</Typography>
+                <Grid sm={6} xs={12} sx={{pl:{sm:10, xs:0}}}>
+                    <Box sx={{px:{sm:0, xs:3}}}>
+                        <Box mb={10} sx={{display:{sm:'unset', xs:'none'}, mt: 10, width: '120px' }} component={'img'} src={logoMain} />
+                        <Typography variant="h4" sx={{fontSize:{sm:'unset', xs:'25px'}}} mb={4}>Sign in to Groupify</Typography>
 
 
-                        <form style={{width:'70%',marginBottom:'20px'}}>
+                        <Box sx={{width:{sm:'70%', xs:'100%'},marginBottom:'20px'}}>
                             <Typography component={'label'}>Your Email</Typography>
                             <TextField
                             sx={{backgroundColor:'#E5E7EB',color:'#F9FAFB',mt:1,mb:3}}
                                 placeholder="name@example.com"
                                 fullWidth
+                                size="small"
                                 margin="normal"
                             />
                             <Typography component={'label'}>Your Password</Typography>
@@ -35,6 +36,7 @@ const SignInEmail = () => {
                             placeholder="••••••••••"
                                 type="password"
                                 fullWidth
+                                size="small"
                                 margin="normal"
                             />
                             
@@ -61,7 +63,7 @@ const SignInEmail = () => {
                                Login to your account
                             </Button>
                             </Link>
-                        </form>
+                        </Box>
 
                         <Link  to="/signUp" style={{textDecoration:'none',color:'#3F83F8'}}>
                             <Typography sx={{color:'#6B7280'}}>Not registered?
