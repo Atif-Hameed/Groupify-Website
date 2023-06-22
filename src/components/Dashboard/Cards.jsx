@@ -4,6 +4,7 @@ import InfoCircle from '../../assets/infoCircle.png'
 import Radio from '../../assets/Radio.png'
 import Rotate from '../../assets/rotate.png'
 import Facebook from '../../assets/facebook.png'
+import { Link } from "react-router-dom";
 
 
 
@@ -40,7 +41,9 @@ const Cards = () => {
                                 <Typography sx={{ color: '#000' }}>Facebook</Typography>
                             </Box>
 
-                            <Typography sx={{ textDecoration: 'underline' }} >click to connect</Typography>
+                            <Link to="https://www.facebook.com" style={{color:'#000'}}>
+                                <Typography sx={{ textDecoration: 'underline',fontWeight:'500' }} >click to connect</Typography>
+                            </Link>
 
                         </Box>
 

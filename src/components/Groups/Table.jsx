@@ -197,7 +197,7 @@ export default function GroupTable() {
                             name={<Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                                 <Typography sx={{ color: '#00778B' }} >23</Typography>
                                 <Box component={'img'} src={Folder} />
-                                <Link to='/salesGrop' style={{ color: '#6B7280' }}>
+                                <Link to='/highlvlGrop' style={{ color: '#6B7280' }}>
                                     <Typography sx={{ textDecoration: 'underline', fontSize: '12px', cursor: 'pointer' }}>Sales Training Groups</Typography>
                                 </Link>
                             </Box>}

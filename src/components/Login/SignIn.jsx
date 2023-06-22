@@ -50,7 +50,7 @@ const SignIn = () => {
                                 <Typography component="span" sx={{fontWeight:{sm:'unset', xs:'bold'}}}>Login with Email</Typography>
                             </Link>
                         </Box>
-                        <Box mb={1}>
+                        <Box mb={0}>
                             <Typography  variant="h10" sx={{ color: 'gray' }}>Copyright 2022 | <span style={{ color: '#00778B' }}>Groupify</span></Typography>
                         </Box>
                     </Box>

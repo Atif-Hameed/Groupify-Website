@@ -37,22 +37,13 @@ const Tabs = (props) => {
                 <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                     <TabList onChange={handleChange} aria-label="lab API tabs example" indicatorColor='secondary' >
 
-                        {/* <Tab label={<Box sx={{ display: 'flex', alignItems: 'center', gap: { sm: 1, xs: 0.5 } }}>
-                            <AccountCircleOutlinedIcon sx={{ color: '#00778B' }} />
-                            <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Profile</Typography>
-                        </Box>} value="1" /> */}
+                        
                         {props.profile}
 
-                        {/* <Tab label={<Box sx={{ display: 'flex', alignItems: 'center', gap: { sm: 1, xs: 0.5 } }}>
-                            <PaymentsOutlinedIcon />
-                            <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Billing</Typography>
-                        </Box>} value="2" /> */}
+                       
                         {props.biling}
 
-                        {/* <Tab label={<Box sx={{ display: 'flex', alignItems: 'center', gap: { sm: 1, xs: 0.5 } }}>
-                            <MonetizationOnOutlinedIcon />
-                            <Typography textTransform={'capitalize'} fontSize={'16px'} color={'#000'} fontWeight={'500'} >Plan</Typography>
-                        </Box>} value="3" /> */}
+                        
                         {props.plan}
 
                     </TabList>
