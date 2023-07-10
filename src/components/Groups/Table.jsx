@@ -50,8 +50,11 @@ export default function GroupTable() {
                         {props.arrow}
                     </TableCell>
                     <TableCell align='right' sx={{ py: 0.7 }}>
-                        <MoreVertIcon onClick={e => setdotOpen(true)} sx={{ color: '#9CA3AF', cursor: 'pointer' }} />
+                        <MoreVertIcon onClick={e => setdotOpen(true)} sx={{ color: '#9CA3AF', cursor: 'pointer' }}>
+                            
+                        </MoreVertIcon>
                     </TableCell>
+
                     <Menu
                         id="demo-positioned-menu"
                         open={dotOpen}
@@ -132,7 +135,7 @@ export default function GroupTable() {
                             <TableCell sx={{ py: 1.1, display: 'flex', justifyContent: 'flex-end' }} colSpan={0}>
 
                                 <Box onClick={e => setOpen(true)} gap={1} sx={{ color: '#00778B', display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-                                    <Typography>Add Folder</Typography>
+                                    <Typography fontWeight={'500'}>Add Folder</Typography>
                                     <Box component={'img'} src={FolderAdd} />
                                 </Box>
 

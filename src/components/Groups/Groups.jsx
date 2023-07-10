@@ -38,7 +38,7 @@ const Groups = () => {
                         <SideBar />
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
-                        <NavBar icon={<FolderOutlinedIcon sx={{ color: '#00778B' }} />} description={<Typography sx={{ color: '#000' }}>Groups</Typography>} />
+                        <NavBar icon={<FolderOutlinedIcon sx={{ color: '#00778B' }} />} description={<Typography sx={{ color: '#000', fontWeight:'bold' }}>Groups</Typography>} />
 
                         <DownNavMenues />
 
@@ -56,6 +56,7 @@ const Groups = () => {
                         <StyledBox sx={{ position: 'absolute', bottom: '0', left: '0', width: '100%' }}>
                             <Bottom />
                         </StyledBox>
+
                     </Grid>
                 </Grid>
 

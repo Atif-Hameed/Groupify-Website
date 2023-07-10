@@ -78,7 +78,9 @@ const TeamGroupDataTable = () => {
                     <TableHead>
                         <TableRow sx={{}}>
                             <TableCell  sx={{ py: 0, width: '5%' }} colSpan={0}>
+                                <Link to="/teamGroups">
                                 <Box component={'img'} src={BackIcon} />
+                                </Link>
                             </TableCell>
                             <TableCell sx={{ py: 0, width: '5%' }} align="start" colSpan={0}>
                                 <Box sx={{ display: 'flex', alignItems: 'center' }}>

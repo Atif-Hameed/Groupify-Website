@@ -78,7 +78,7 @@ export default function HighlvlContent() {
                             <TableCell></TableCell>
                             <TableCell sx={{ py: 1.1, display: 'flex', justifyContent: 'flex-end' }} colSpan={0}>
                                 <Box gap={1} sx={{ color: '#00778B', display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-                                    <Typography>Add Folder</Typography>
+                                    <Typography sx={{fontWeight:'500'}}>Add Folder</Typography>
                                     <Box component={'img'} src={FolderAdd} />
                                 </Box>
                             </TableCell>

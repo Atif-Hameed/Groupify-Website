@@ -18,7 +18,9 @@ const SignUp = () => {
                 </Grid>
                 <Grid sm={6} xs={12} sx={{ pl: { sm: 10, xs: 0 }, height: '100%' }} position={'relative'}>
                     <Box sx={{ px: { sm: 0, xs: 3 }}}>
+                        <Link to="/" >
                         <Box mb={6} sx={{ display: { sm: 'unset', xs: 'none' }, mt: 10, width: '120px' }} component={'img'} src={logoMain} />
+                        </Link>
                         <Typography variant="h4" sx={{ fontSize: { sm: 'unset', xs: '30px' }, mb: { sm: 4, xs: 2 } }}>Sign Up to Groupify</Typography>
 
 

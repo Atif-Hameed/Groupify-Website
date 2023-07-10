@@ -40,23 +40,23 @@ export default function TeamTable() {
                                 <TableRow sx={{}}>
 
                                     <TableCell sx={{ py: 0 }} align="start" colSpan={0}>
-                                        <Typography>Status</Typography>
+                                        <Typography sx={{fontWeight:'500'}}>Status</Typography>
                                     </TableCell>
                                     <TableCell sx={{ py: 0 }} align="start" colSpan={0}>
-                                        <Typography>Team Members</Typography>
+                                        <Typography sx={{fontWeight:'500'}}>Team Members</Typography>
                                     </TableCell>
 
                                     <TableCell sx={{ py: 0 }} align="left" colSpan={0}>
-                                        <Typography>Pending Groups </Typography>
+                                        <Typography sx={{fontWeight:'500'}}>Pending Groups </Typography>
                                     </TableCell>
 
                                     <TableCell sx={{ py: 0 }} align="left" colSpan={0}>
-                                        <Typography>Active Groups </Typography>
+                                        <Typography sx={{fontWeight:'500'}}>Active Groups </Typography>
                                     </TableCell>
 
                                     <TableCell sx={{ py: 1.1, display: 'flex', justifyContent: 'flex-end' }} colSpan={0}>
                                         <Box onClick={e => setOpen(true)} gap={1} sx={{ color: '#00778B', display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-                                            <Typography>Add</Typography>
+                                            <Typography sx={{fontWeight:'500'}}>Add</Typography>
                                             <PersonAddAltIcon />
                                         </Box>
 

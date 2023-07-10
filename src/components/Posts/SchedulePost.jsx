@@ -106,6 +106,7 @@ const SchedulePost = (props) => {
                                     <Select
                                         sx={{ width: '450px', backgroundColor:'#E5E7EB'}}
                                         value={personName}
+                                        size="small"
                                         onChange={handleChange}
                                         displayEmpty
                                         inputProps={{ 'aria-label': 'Without label' }}
@@ -126,6 +127,7 @@ const SchedulePost = (props) => {
                                     <Select
                                         sx={{ width: '450px', backgroundColor:'#E5E7EB' }}
                                         value={personName}
+                                        size="small"
                                         onChange={handleChange}
                                         displayEmpty
                                         inputProps={{ 'aria-label': 'Without label' }}

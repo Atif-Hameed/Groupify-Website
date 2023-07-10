@@ -18,8 +18,11 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import WidgetsIcon from '@mui/icons-material/Widgets';
-import { TextField } from '@mui/material';
+import { Avatar, TextField } from '@mui/material';
+import avatarAngle from '../../assets/avatarAngle.png'
+import avatarImage from '../../assets/avatarImg2.png'
 import Cards from './Cards';
+import './index.css'
 
 
 const StyledBox = styled(Box)(({ theme }) => ({
@@ -118,8 +121,31 @@ export default function DownNavFix() {
                                 <Box component={'img'} src={AddIcon} />
                                 <Box component={'img'} src={AddIcon} />
                                 <Box component={'img'} src={AddIcon} />
-                                <Box component={'img'} src={CcIcon} />
-                                <Box component={'img'} src={ImageIcon} />
+
+                                <div className='avatarImg'>
+                                    <Avatar sx={{
+                                        position:'relative',
+                                        width:'46px',
+                                        height:'46px',
+                                        fontSize:'15px',
+                                        backgroundColor: '#00778B', '& > *': {
+                                            display: 'none',
+                                        },
+                                    }}>CC</Avatar>
+                                    <img className='avatarAngle' src={avatarAngle} />
+                                </div>
+
+                                
+                                <div className='avatarImg'>
+                                    <Avatar sx={{
+                                        position:'relative',
+                                        width:'46px',
+                                        height:'46px',
+                                        fontSize:'15px',
+                                    }} src={avatarImage} />
+                                    <img className='avatarAngle' src={avatarAngle} />
+                                </div>
+
                             </Box>
                         </Box>
 
@@ -127,7 +153,7 @@ export default function DownNavFix() {
                 </AppBar>
             </StyledBox>
 
-            <StyledBox2 sx={{px:2.5,mt:2}}>
+            <StyledBox2 sx={{ px: 2.5, mt: 2 }}>
                 <IconButton
                     size="large"
                     edge="start"
@@ -141,7 +167,7 @@ export default function DownNavFix() {
             </StyledBox2>
 
 
-           
+
 
 
         </>

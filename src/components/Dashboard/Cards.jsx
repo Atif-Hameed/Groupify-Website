@@ -38,7 +38,7 @@ const Cards = () => {
 
                             <Box display={'flex'} alignItems={'center'} gap={1}>
                                 <Box component={'img'} src={Facebook} />
-                                <Typography sx={{ color: '#000' }}>Facebook</Typography>
+                                <Typography sx={{ color: '#000', fontWeight:'500' }}>Facebook</Typography>
                             </Box>
 
                             <Link to="https://www.facebook.com" style={{color:'#000'}}>

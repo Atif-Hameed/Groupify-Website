@@ -88,8 +88,8 @@ const PendingPostTable = () => {
 
                             <TableCell sx={{ py: 1 }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <Box component={'img'} src={CopyIcon} />
-                                    <Typography>This is the content of the post written...</Typography>
+                                    <Box component={'img'} width={'18px'} src={CopyIcon} />
+                                    <Typography sx={{fontWeight:'light', fontSize:'small'}}>This is the content of the post written...</Typography>
                                 </Box>
                             </TableCell>
 
@@ -132,8 +132,8 @@ const PendingPostTable = () => {
 
                             <TableCell sx={{ py: 1 }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <Box component={'img'} src={CopyIcon} />
-                                    <Typography>This is the content of the post written...</Typography>
+                                    <Box component={'img'} width={'18px'} src={CopyIcon} />
+                                    <Typography sx={{fontWeight:'light', fontSize:'small'}}>This is the content of the post written...</Typography>
                                 </Box>
                             </TableCell>
 

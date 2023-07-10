@@ -19,13 +19,14 @@ import footer from '../../assets/footer.png'
 import chorom from '../../assets/chromBig.png'
 import line from '../../assets/line.png'
 import edge from '../../assets/edgeBig.png'
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // import SignIn from "./logIn/signIn";
-import footerIcon from '../../assets/footer.png'
-import footerCirlcle from '../../assets/footer.png'
+import footerIcon from '../../assets/footerIcon.png'
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { Hidden } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import { Link } from "react-router-dom";
+import './index.css'
 
 
 const MainBox = styled(Box)({
@@ -47,16 +48,6 @@ const MainBox2 = styled(Box)({
     marginBottom: { sm: '100px', xs: 0 }
 })
 
-
-const FooterBox = styled(Box)({
-    position: 'relative',
-    backgroundImage: `url(${footer})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    height: '456px',
-    width: '100%',
-})
 
 
 
@@ -145,69 +136,74 @@ const LandingPage = () => {
                 <Typography variant="h5" sx={{ fontSize: { sm: 'auto', xs: '20px' } }} mb={2} textAlign={'center'}>And You Can Always <span style={{ color: '#00778B', fontWeight: 'bold' }} >Contact Us</span></Typography>
 
                 <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                    <Box sx={{ width: { sm: '35%', xs: '90%' } }}>
+                    <Box sx={{display:'flex',flexDirection:'column',gap:'1.5rem', width: { sm: '35%', xs: '90%' } }}>
 
-
-                        <FormControl sx={{ mb: 2, width: '100%', }}>
-                            <select id="mySelect" style={{ padding: '17px', fontSize: '17px', fontWeight: '500', borderColor: '#E5E7EB', borderRadius: '5px' }}>
-                                <option >
-                                    What is the GroupZen Teams™ feature?
-                                </option>
-                                <option value="option1">Option 1</option>
-                                <option value="option2">Option 2</option>
-                                <option value="option3">Option 3</option>
-                            </select>
-                        </FormControl>
-
-
-
-                        <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%', justifyContent: 'center', mb: 2, mt: 1, }}>
-
-                            <Box p={2} sx={{
-                                border: '1px solid #E5E7EB',
-                                backgroundColor: '#00778B',
-                                display: 'flex',
-                                justifyContent: 'space-between',
-                                borderTopRightRadius: '5px',
-                                borderTopLeftRadius: '5px'
-                            }}>
-                                <Typography variant="h7" color={'#fff'}>
-                                    This is our most requested upgrade, and we are excited to launch it!
+                        <Accordion>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                            >
+                                <Typography sx={{ fontWeight: 'bold', fontSize: '17px' }} >What is the GroupZen Teams™ feature?</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
                                 </Typography>
-                                <ExpandLessIcon sx={{ color: '#fff' }} />
-                            </Box>
+                            </AccordionDetails>
+                        </Accordion>
 
-
-                            <Box p={2} sx={{
-                                border: '1px solid #E5E7EB'
-                            }}>
+                        <Accordion sx={{borderTopLeftRadius:'5px', borderTopRightRadius:'5px'}}>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon sx={{ color: '#fff' }}/>}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                                sx={{backgroundColor:'#00778B', borderTopLeftRadius:'5px', borderTopRightRadius:'5px'}}
+                            >
+                                <Typography sx={{ color:'#fff',fontSize:'15.5px' }} >This is our most requested upgrade, and we are excited to launch it!</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
                                 <Typography color={'#6B7280'}>
-                                    GroupZen is the only platform that allows you to manage your team for co-ordinated Facebook Group Marketing!  Quickly add unlimited that allows you to manage your team members and assign a list of Facebook Groups for them to join (you'll be able to auto-track their progress!)
+                                    GroupZen is the only platform that allows you to manage your team for
+                                    co-ordinated Facebook Group Marketing!  Quickly add unlimited
+                                    that allows you to manage your team members and assign a list of Facebook
+                                    Groups for them to join (you'll be able to auto-track their progress!)
                                 </Typography>
-                            </Box>
-                        </Box>
+                            </AccordionDetails>
+                        </Accordion>
 
-                        <FormControl sx={{ mb: 2, width: '100%' }}>
-                            <select id="mySelect" style={{ padding: '17px', fontSize: '17px', fontWeight: '500', borderColor: '#E5E7EB', borderRadius: '5px' }}>
-                                <option >
-                                    When will GroupZen Teams™ be ready to Launch?
-                                </option>
-                                <option value="option1">Option 1</option>
-                                <option value="option2">Option 2</option>
-                                <option value="option3">Option 3</option>
-                            </select>
-                        </FormControl>
+                        <Accordion>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                            >
+                                <Typography sx={{ fontWeight: 'bold', fontSize: '17px' }} >When will GroupZen Teams™ be ready to Launch?</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
 
-                        <FormControl sx={{ mb: 2, width: '100%' }}>
-                            <select id="mySelect" style={{ padding: '17px', fontSize: '17px', fontWeight: '500', borderColor: '#E5E7EB', borderRadius: '5px' }}>
-                                <option >
-                                    How will Facebook Groups list sync to my GroupZen™ account?
-                                </option>
-                                <option value="option1">Option 1</option>
-                                <option value="option2">Option 2</option>
-                                <option value="option3">Option 3</option>
-                            </select>
-                        </FormControl>
+                        <Accordion>
+                            <AccordionSummary
+                                expandIcon={<ExpandMoreIcon />}
+                                aria-controls="panel1a-content"
+                                id="panel1a-header"
+                            >
+                                <Typography sx={{ fontWeight: 'bold', fontSize: '17px' }} >How will Facebook Groups list sync to my GroupZen™ account?</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                                <Typography>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                    malesuada lacus ex, sit amet blandit leo lobortis eget.
+                                </Typography>
+                            </AccordionDetails>
+                        </Accordion>
 
                     </Box>
                 </Box>
@@ -216,30 +212,29 @@ const LandingPage = () => {
 
 
             {/* FOOTER */}
-            <FooterBox mt={10}>
+            <div className="FooterBox" mt={10}>
+                <img className="footerImage" src={footerIcon} alt="" />
+                <Typography variant="h3" pt={10} textAlign={'center'} sx={{ color: '#fff', fontSize:'40px' }}>Install Extension</Typography>
 
-                <Typography variant="h3" pt={10} textAlign={'center'} sx={{ color: '#fff' }}>Install Extension</Typography>
-
-                <Box mt={6} sx={{ display:'flex', justifyContent:'center'}}>
-                    <Grid container sx={{width:{sm:'40%', xs:'100%'},display:'flex',alignItems:'center', justifyContent:{sm:'space-between', xs:'center'}, gap:{sm:0, xs:2}}}>
-                        <Grid item sx={{display:'flex', flexDirection:'column',alignItems:'center',gap:4}}>
+                <Box mt={6} sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <Grid container sx={{ width: { sm: '32%', xs: '100%' }, display: 'flex', alignItems: 'center', justifyContent: { sm: 'space-between', xs: 'center' }, gap: { sm: 0, xs: 2 } }}>
+                        <Grid item sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
                             <Box component={'img'} src={chorom} />
-                            <Button variant="contained" sx={{backgroundColor:'#fff', color:'#000', px:{sm:5,xs:1.5}, py:{sm:1.8, xs:1},borderRadius:'30px','&:hover':{backgroundColor:'gray',color:'#fff'}}} >Chrome Extension</Button>
+                            <Button variant="contained" sx={{ backgroundColor: '#fff', color: '#000', px: { sm: 5, xs: 1.5 }, py: { sm: 1.8, xs: 1 }, borderRadius: '30px', '&:hover': { backgroundColor: 'gray', color: '#fff' } }} >Chrome Extension</Button>
                         </Grid>
                         <Grid item>
                             <Box component={'img'} src={line} />
                         </Grid>
-                        <Grid item sx={{display:'flex', flexDirection:'column',alignItems:'center',gap:4}}>
+                        <Grid item sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
                             <Box component={'img'} src={edge} />
-                            <Button variant="outlined" sx={{borderColor:'#fff', color:'#fff', px:{sm:5,xs:1.5}, py:{sm:1.8, xs:1},borderRadius:'30px','&:hover':{color:'#000',borderColor:'#000'}}} >Edge Extension</Button>
+                            <Button variant="outlined" sx={{ borderColor: '#fff', color: '#fff', px: { sm: 5, xs: 1.5 }, py: { sm: 1.8, xs: 1 }, borderRadius: '30px', '&:hover': { color: '#000', borderColor: '#000' } }} >Edge Extension</Button>
                         </Grid>
                     </Grid>
                 </Box>
 
-                
+            </div>
 
-            </FooterBox>
-            <Typography variant="h6" textAlign={'center'} sx={{ color: '#6B7280', fontSize:{sm:'20px', xs:'16px'} }} p={1} >Copyright 2022 <span style={{ color: '#00778B', fontWeight: 'bold' }} >Groupify™</span> All rights reserved.</Typography>
+            <Typography variant="h6" textAlign={'center'} sx={{ color: '#6B7280', fontSize: { sm: '20px', xs: '16px' } }} p={1} >Copyright 2022 <span style={{ color: '#00778B', fontWeight: 'bold' }} >Groupify™</span> All rights reserved.</Typography>
 
         </>
     )

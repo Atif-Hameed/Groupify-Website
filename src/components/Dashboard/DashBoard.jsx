@@ -29,7 +29,7 @@ const DashBoard = () => {
                         <SideBar/>
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
-                        <NavBar icon={<WidgetsOutlinedIcon sx={{ color: '#00778B' }} />}  description={<Typography sx={{ color: '#000' }}>DashBoard</Typography>} />
+                        <NavBar icon={<WidgetsOutlinedIcon sx={{ color: '#00778B' }} />}  description={<Typography sx={{ color: '#000',fontWeight:'bold' }}>DashBoard</Typography>} />
                         <DownNavFix/>
                         <Cards/>
                         <StyledBox sx={{position:'absolute',bottom:'0',left:'0',width:'100%'}}>

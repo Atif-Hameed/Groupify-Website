@@ -1,0 +1,9 @@
+.avatarImg{
+    position: relative;
+    display: flex;
+}
+.avatarAngle{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

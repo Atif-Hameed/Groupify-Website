@@ -63,9 +63,11 @@ const Billing = () => {
                         </Card>
                     </Grid>
 
-                    <Grid item sm={8} xs={12} >
+                    <Grid item sm={8} xs={12}  >
                         <Typography mb={2} variant="h5" fontSize={'20px'} fontWeight={'bold'} color={'#1F2A37'} >Transaction History</Typography>
+                        <Box>
                         <BillingTable/>
+                        </Box>
                     </Grid>
                 
                 </Grid>

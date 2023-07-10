@@ -20,7 +20,9 @@ const ForgotPass = () => {
                 <Grid sm={6} xs={12} sx={{ pl: { sm: 10, xs: 0 }, height:'100%' }} position={'relative'}>
                     <Box sx={{px:{sm:0, xs:3},height:'100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap:{sm:0, xs:11} }} >
                         <Box>
+                            <Link to="/">
                             <Box mb={10} sx={{ display: { sm: 'unset', xs: 'none' }, mt: 10, width: '120px' }} component={'img'} src={logoMain} />
+                            </Link>
                             <Typography variant="h4" sx={{fontSize:{sm:'unset', xs:'25px'}}} mb={4}>Lost your password?</Typography>
 
 

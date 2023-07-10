@@ -111,7 +111,7 @@ export default function BillingTable() {
     return (
         <>
             <Paper sx={{ display: { sm: 'unset', xs: 'none' } }}>
-                <TableContainer sx={{ maxHeight: 500, minHeight: 300, backgroundColor: 'transparent' }}>
+                <TableContainer sx={{ maxHeight: 450, minHeight: 200, backgroundColor: 'transparent' }}>
                     <Table stickyHeader aria-label="sticky table">
 
                         <TableHead>
@@ -141,7 +141,7 @@ export default function BillingTable() {
                         </TableHead>
 
 
-                        <TableBody sx={{ backgroundColor: '#F6F6F6' }}>
+                        <TableBody sx={{ backgroundColor: '#F6F6F6', overflow:'auto' }}>
 
                             <TableRows />
                             <TableRows />
@@ -153,7 +153,13 @@ export default function BillingTable() {
                             <TableRows />
                             <TableRows />
                             <TableRows />
-                            {/* <TableRows /> */}
+                            <TableRows />
+                            <TableRows />
+                            <TableRows />
+                            <TableRows />
+                            <TableRows />
+                            <TableRows />
+                            <TableRows />
 
                         </TableBody>
                     </Table>

@@ -54,7 +54,7 @@ const NavBar = (props) => {
                             edge="start"
                             color="inherit"
                             aria-label="open drawer"
-                            sx={{ mr: 2, gap: 1, ml: -1, display: 'flex', alignItems: 'center', }}
+                            sx={{ mr: 2, gap: 1, ml: -1, display: 'flex', alignItems: 'center','&:hover':{backgroundColor:'unset'} }}
                         >
                             <Box>{props.icon}</Box>
                             <Box>{props.description}</Box>
@@ -65,7 +65,7 @@ const NavBar = (props) => {
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, color: '#00778B' }}>
                             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                                 <Box component={'img'} src={LikeVector} />
-                                <Typography>Upgrade</Typography>
+                                <Typography sx={{fontWeight:'500'}}>Upgrade</Typography>
                             </Box>
                             <Avatar sx={{cursor:'pointer'}} onClick={e=>setOpen(true)} alt="Remy Sharp" src={person2} />
                         </Box>

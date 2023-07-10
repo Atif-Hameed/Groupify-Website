@@ -73,9 +73,9 @@ const OrderDetails = (props) => {
 
                             <Headings heading="Plan Type" />
 
-                            <ButtonGroup sx={{ mb: 2, border: '1px solid #6B7280' }} variant="outlined" aria-label="outlined button group">
-                                <Button variant="contained" sx={{ backgroundColor: '#E1EFFE', color: '#1C64F2', py: 1, fontSize: '16px' }} >Monthly</Button>
-                                <Button sx={{ color: '#6B7280', border: 'none', py: 1, fontSize: '16px' }} >Yearly</Button>
+                            <ButtonGroup size="small" sx={{ mb: 2, border: '1px solid #6B7280' }} variant="outlined" aria-label="outlined button group">
+                                <Button variant="contained" size="small" sx={{ backgroundColor: '#E1EFFE', color: '#1C64F2', py: 1, fontSize: '16px' }} >Monthly</Button>
+                                <Button size="small" sx={{ color: '#6B7280', border: 'none', py: 1, fontSize: '16px' }} >Yearly</Button>
                             </ButtonGroup>
 
                             <Headings heading="Plan Price" />

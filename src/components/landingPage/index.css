@@ -1,0 +1,26 @@
+.FooterBox{
+    position: relative;
+    background-image: url('../../assets/footer.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
+    width: auto;
+    margin-top: 10rem;
+}
+.footerImage{
+    position: absolute;
+    height: 5.5rem;
+    width: 5.5rem;
+    top: -2.5rem;
+    left: 48%;
+}
+
+@media only screen and (max-width: 600px) {
+   .FooterBox{
+    background-size: cover;
+   }
+   .footerImage{
+    left: 42%;
+   }
+  }

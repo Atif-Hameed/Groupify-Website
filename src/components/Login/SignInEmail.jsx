@@ -17,7 +17,9 @@ const SignInEmail = () => {
                 </Grid>
                 <Grid sm={6} xs={12} sx={{pl:{sm:10, xs:0}}}>
                     <Box sx={{px:{sm:0, xs:3}}}>
+                        <Link to="/">
                         <Box mb={10} sx={{display:{sm:'unset', xs:'none'}, mt: 10, width: '120px' }} component={'img'} src={logoMain} />
+                        </Link>
                         <Typography variant="h4" sx={{fontSize:{sm:'unset', xs:'25px'}}} mb={4}>Sign in to Groupify</Typography>
 
 

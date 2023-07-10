@@ -24,8 +24,9 @@ const SignIn = () => {
                     <Box sx={{px:{sm:0, xs:2}, height:'100%', display: 'flex', flexDirection:'column', justifyContent: 'space-between', gap:{sm:0, xs:21}}}>
                        
                         <Box sx={{mt:{sm:10, xs:3},}}>
-                           
+                           <Link to="/">
                             <Box sx={{ mb: { sm: 10, xs: '2' },display:{sm:'unset', xs:'none'},width: '120px' }} component={'img'} src={logoMain} />
+                            </Link>
                             <Typography variant="h4" mb={4}>Welcome to Groupify</Typography>
                             <Typography variant="h6" sx={{ color: '#292D32' }} mb={3}>Login to Facebook to Continue</Typography>
 
