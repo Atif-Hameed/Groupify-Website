@@ -31,7 +31,7 @@ const Extension = () => {
                         <SideBar />
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
-                        <NavBar icon={<ExtensionOutlinedIcon sx={{color:'#00778B'}} />} description={<Typography sx={{ color: '#000',fontSize:'18px' }}>Extension</Typography>} />
+                        <NavBar icon={<ExtensionOutlinedIcon sx={{color:'#00778B'}} />} description={<Typography sx={{ color: '#000',fontSize:'18px',fontWeight:'bold' }}>Extension</Typography>} />
                         <DownNav ComponentName="Extensions"  ComponentIcon={<ExtensionSharpIcon />} />
                         <ExtensionMain/>
                         <StyledBox sx={{ position: 'absolute', bottom: '0', left: '0', width: '100%' }}>

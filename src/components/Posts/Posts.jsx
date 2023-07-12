@@ -31,7 +31,7 @@ const Posts = () => {
                         <SideBar />
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
-                        <NavBar icon={<Box component={'img'} src={PostIcon} />} description={<Typography sx={{ color: '#000' }}>Posts</Typography>} />
+                        <NavBar icon={<Box component={'img'} src={PostIcon} />} description={<Typography sx={{ color: '#000',fontWeight:'bold' }}>Posts</Typography>} />
                         <DownNav ComponentName="Post"  ComponentIcon={<BorderColorIcon />} />
                         <PostTabs />
                         <StyledBox sx={{ position: 'absolute', bottom: '0', left: '0', width: '100%' }}>

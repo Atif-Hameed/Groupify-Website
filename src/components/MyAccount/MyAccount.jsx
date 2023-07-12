@@ -33,9 +33,9 @@ const MyAccount = () => {
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
                         <NavBar icon={<AccountCircleOutlinedIcon sx={{ color: '#00778B' }} />} description={<Box sx={{display:'flex', alignItems:'center'}}>
-                            <Typography sx={{ color: '#000' }}>My Account</Typography>
-                            <ChevronRightIcon sx={{color:'#00778B'}} />
-                            <Typography fontSize={'16px'} color={'#00778B'} >Profile</Typography>
+                            <Typography sx={{ color: '#000',fontWeight:'bold' }}>My Account</Typography>
+                            {/* <ChevronRightIcon sx={{color:'#00778B'}} /> */}
+                            {/* <Typography fontSize={'16px'} color={'#00778B'} >Profile</Typography> */}
                         </Box>} />
                         <MyAccountTabs />
                         <StyledBox sx={{ position: 'absolute', bottom: '0', left: '0', width: '100%' }}>

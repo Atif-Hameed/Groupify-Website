@@ -28,7 +28,7 @@ const Team = () => {
                         <SideBar/>
                     </Grid>
                     <Grid sm={10} xs={12} height={'100vh'} position={'relative'}>
-                        <NavBar icon={<AssignmentIndOutlinedIcon sx={{ color: '#00778B' }} />}  description={<Typography sx={{ color: '#000' }}>Team</Typography>} />
+                        <NavBar icon={<AssignmentIndOutlinedIcon sx={{ color: '#00778B' }} />}  description={<Typography sx={{ color: '#000',fontWeight:'bold' }}>Team</Typography>} />
                         
                         <DownNav ComponentName="Team"  ComponentIcon={<AssignmentIndOutlinedIcon />} />
                         <TeamTable/>
