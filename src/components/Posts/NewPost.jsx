@@ -16,7 +16,8 @@ const NewPost = (props) => {
     const [schedulopen, setschedulopen] = useState(false)
 
     return (
-        <>
+        <>   
+                                                       {/* THis comment has no use. */}
             <Box maxWidth={'900px'} minWidth={'auto'} height={'auto'} >
 
                 <Box width={'100%'} py={0.5} height={'50px'} sx={{ backgroundColor: '#00778B', display: 'flex', alignItems: 'center' }}>
